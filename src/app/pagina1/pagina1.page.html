@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pagina1</ion-title>
+
+    
+    <h1> Listado de Acontecimientos</h1>
+    
+
+    <h1>Lista de  Pagina</h1>
+  <ion-list>
+    <ion-item *ngFor="let documentPagina of arrayColeccionPagina">
+      <ion-grid>
+        <ion-row>
+          <h2>{{documentPagina.data.titulo}}</h2>
+        </ion-row>
+        <ion-row>
+          <p>{{documentPagina.data.descripcion}}</p>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+
+</ion-toolbar>
+
+<ion-list>
+
+     <ion-item *ngFor="let documentPagina of arrayColeccionPagina" (click)="selecpagina(documentPagina)">
+     </ion-item>
+
+</ion-list>
+
+  <ion-button (click)="clicBotonBorrar()">Borrar tarea</ion-button>
+
+  <ion-button (click)="clicBotonModificar()">Modificar tarea</ion-button>
+
+</ion-header>
+
+
+
+<ion-content>
+  <ion-button routerLink="/home" routerDirection="forward">Home </ion-button>
+</ion-content>

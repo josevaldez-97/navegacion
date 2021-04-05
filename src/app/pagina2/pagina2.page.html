@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>pagina2</ion-title>
+
+    <h1> navegacion</h1>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-button routerLink="/home" routerDirection="forward">Ir a Home </ion-button>
+
+
+
+<ion-content>
+
+  <ion-item>
+    <ion-label>Título</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.titulo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Descripción</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.descripcion"></ion-input>
+    <ion-button (click)="clicBotonInsertar()">Añadir tarea</ion-button>
+  </ion-item>
+  
+  
+
+
+  <ion-item>
+  <h1>LISTA DE TAREAS</h1>
+  <ion-list>
+    <ion-item *ngFor="let documentTarea of arrayColeccionTareas">
+      <ion-grid>
+        <ion-row>
+          <h1>{{documentTarea.data.titulo}}</h1>
+        </ion-row>
+        <ion-row>
+          <p>{{documentTarea.data.descripcion}}</p>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+  </ion-item>
+
+
+  <p> Título: {{ document.data.titulo }} </p>
+  <ion-item>
+  <ion-list>
+    <ion-item *ngFor="let documentTarea of arrayColeccionTareas" (click)="selecTarea(documentTarea)">
+      ...
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="clicBotonBorrar()">Borrar tarea</ion-button>
+</ion-item>
+
+<ion-item>
+  <ion-button (click)="clicBotonModificar()">Modificar tarea</ion-button>
+</ion-item>
+
+  
+
+  
+
+</ion-content>
