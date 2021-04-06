@@ -13,6 +13,7 @@
   },
   "private": true,
   "dependencies": {
+    "-": "^0.0.1",
     "@angular/common": "~11.2.0",
     "@angular/core": "~11.2.0",
     "@angular/fire": "^6.1.4",
@@ -23,7 +24,13 @@
     "@ionic/angular": "^5.5.2",
     "angularfire": "^2.3.0",
     "angularfire2": "^5.4.2",
+    "bower": "^1.8.12",
+    "cordova": "^10.0.0",
     "firebase": "^8.3.2",
+    "firebase-admin": "^9.6.0",
+    "g": "^2.0.1",
+    "gulp": "^4.0.2",
+    "ionic": "^5.4.16",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
