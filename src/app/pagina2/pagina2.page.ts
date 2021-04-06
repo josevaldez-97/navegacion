@@ -82,6 +82,9 @@ export class Pagina2Page implements OnInit {
     data: {} as Tareas};
   
  
+
+
+
   ngOnInit() {
   }
 

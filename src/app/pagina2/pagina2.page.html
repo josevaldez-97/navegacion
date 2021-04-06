@@ -1,38 +1,35 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>pagina2</ion-title>
-
     <h1> navegacion</h1>
-
   </ion-toolbar>
 </ion-header>
 
-<ion-button routerLink="/home" routerDirection="forward">Ir a Home </ion-button>
-
-
-
 <ion-content>
-
   <ion-item>
     <ion-label>Título</ion-label>
     <ion-input [(ngModel)]="tareaEditando.titulo"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label>Descripción</ion-label>
+
     <ion-input [(ngModel)]="tareaEditando.descripcion"></ion-input>
+    <h4> </h4>
     <ion-button (click)="clicBotonInsertar()">Añadir tarea</ion-button>
+    <ion-button (click)="clicBotonModificar()">Modificar tarea</ion-button>
+   
+
   </ion-item>
-  
-  
 
-
+   
   <ion-item>
   <h1>LISTA DE TAREAS</h1>
+  <h1>       </h1>
   <ion-list>
     <ion-item *ngFor="let documentTarea of arrayColeccionTareas">
       <ion-grid>
         <ion-row>
-          <h1>{{documentTarea.data.titulo}}</h1>
+          <h5><h4> {{documentTarea.data.titulo}} </h4> </h5>
         </ion-row>
         <ion-row>
           <p>{{documentTarea.data.descripcion}}</p>
@@ -42,7 +39,6 @@
   </ion-list>
   </ion-item>
 
-
   <p> Título: {{ document.data.titulo }} </p>
   <ion-item>
   <ion-list>
@@ -50,15 +46,11 @@
       ...
     </ion-item>
   </ion-list>
-  <ion-button (click)="clicBotonBorrar()">Borrar tarea</ion-button>
+ 
 </ion-item>
 
-<ion-item>
-  <ion-button (click)="clicBotonModificar()">Modificar tarea</ion-button>
-</ion-item>
+<ion-button (click)="buscarporid()">Borrar tarea</ion-button>
 
+<p> Título: {{ document.data.titulo }} </p>
   
-
-  
-
 </ion-content>
