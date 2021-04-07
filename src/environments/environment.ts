@@ -14,9 +14,10 @@ export const environment = {
     messagingSenderId: "827580830292",
     appId: "1:827580830292:web:4dfe2e65be99017be3d3c1",
     measurementId: "G-QJYBY23E0Y"
-
-
   }
+  // Initialize Firebase
+
+
 
 
 
@@ -34,4 +35,4 @@ export const environment = {
  * This import should be commented out in production mode because it will have a negative impact
  * on performance if an error is thrown.
  */
- import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+ //import 'zone.js/dist/zone-error';  // Included with Angular CLI.

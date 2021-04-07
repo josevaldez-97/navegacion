@@ -15,18 +15,24 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 
 //import { Component } from '@angular/core';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { MenuComponent } from './menu/menu.component';
 
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, 
+  imports: [
+    BrowserModule,
     IonicModule.forRoot(),
      AppRoutingModule,
+
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireModule,
 
-    
+    //MenuComponent,
+
+
+
     AngularFireAuthModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
@@ -35,8 +41,12 @@ import { ServiceWorkerModule } from '@angular/service-worker';
       registrationStrategy: 'registerWhenStable:30000'
     })],
 
-    
+
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+
+
+
+}

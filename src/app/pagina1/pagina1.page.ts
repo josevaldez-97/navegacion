@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class Pagina1Page implements OnInit {
 
 
-  
+
   constructor() { }
 
   ngOnInit() {
